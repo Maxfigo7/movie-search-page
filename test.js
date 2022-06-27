@@ -1,5 +1,5 @@
 async function fetch_movies (search_term) {
-    const response = await fetch(`http://www.omdbapi.com/?s=${search_term}&apikey=79e520a4`) 
+    const response = await fetch(`https://www.omdbapi.com/?s=${search_term}&apikey=79e520a4`) 
     const movies = await response.json()
     console.log(movies.Search );
     return movies.Search
@@ -29,7 +29,7 @@ btn.addEventListener("click",()=>{
     let search = input.value;
 
     async function fetch_plot (search_term) {
-        const response = await fetch(`http://www.omdbapi.com/?t=${search_term}&apikey=79e520a4`) 
+        const response = await fetch(`https://www.omdbapi.com/?t=${search_term}&apikey=79e520a4`) 
         const movie = await response.json()
         return movie.Plot
     } 
